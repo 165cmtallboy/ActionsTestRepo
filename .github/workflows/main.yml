@@ -2,7 +2,7 @@ name: DEPLOY_MAIN
 on:
   push:
     branches:
-    - main
+    - add-github-actions
 
 jobs:
   deploy:
@@ -14,7 +14,7 @@ jobs:
       with:
         switches: -vzrd
         path: ./
-        remote_path: ${{ secrets.SSH_PATH }}
-        remote_host: ${{ secrets.SSH_HOST }}
-        remote_user: ${{ secrets.SSH_USER }}
+        remote_path: ${{ env.SSH_PATH }}
+        remote_host: ${{ env.SSH_HOST }}
+        remote_user: ${{ env.SSH_USER }}
         remote_key: ${{ secrets.SSH_SECRET_KEY }}

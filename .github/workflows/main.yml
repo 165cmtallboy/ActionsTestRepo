@@ -13,7 +13,7 @@ jobs:
       uses: burnett01/rsync-deployments@5.2.1
       with:
         switches: -vzrd
-        path: ./main/
+        path: ./
         remote_path: ${{ secrets.SSH_PATH }}
         remote_host: ${{ secrets.SSH_HOST }}
         remote_user: ${{ secrets.SSH_USER }}

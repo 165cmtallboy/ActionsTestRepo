@@ -14,7 +14,7 @@ jobs:
       with:
         switches: -vzrd
         path: ./
-        remote_path: ${{ env.SSH_PATH }}
-        remote_host: ${{ env.SSH_HOST }}
-        remote_user: ${{ env.SSH_USER }}
+        remote_path: ${{ vars.SSH_PATH }}
+        remote_host: ${{ vars.SSH_HOST }}
+        remote_user: ${{ vars.SSH_USER }}
         remote_key: ${{ secrets.SSH_SECRET_KEY }}

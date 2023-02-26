@@ -2,7 +2,7 @@ name: DEPLOY_MAIN
 on:
   push:
     branches:
-    - add-github-actions
+    - main
 
 jobs:
   deploy:
